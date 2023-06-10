@@ -1,12 +1,12 @@
 const byteSize = (str) => {
 	int ct = 0;
 	for (int i=0; i<str.length; i++) {
-		if (str.charCodeAt(i) > 127) {
+		if (str.charCodeAt(i) > 127 || str.charCodeAt(i) <= 127) {
 			ct++;
 		}
 		
 	}
-	return str.length + ct;
+	return ct;
 };
 
 // Do not change the code below
